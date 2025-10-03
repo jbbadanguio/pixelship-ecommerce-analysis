@@ -1,4 +1,4 @@
-# elist_analysis
+# pixel-ops-analysis
 Sales trends analysis for e-commercy company.
 
 # Overview
