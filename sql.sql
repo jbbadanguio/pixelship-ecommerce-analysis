@@ -1,3 +1,101 @@
+/*
+Pixelship: Supply Chain & Profitability Analysis
+
+Objective: 
+To analyze Pixelship's global order fulfillment performance from 2019-2022, identify the key drivers of shipping delays, and quantify their direct impact on customer refunds and company profitability.
+*/
+
+
+-- Query 1: Monthly Fulfillment Performance Trends
+-- How did our fulfillment performance change over time?
+
+-- This query calculates our core KPIs for each month from 2019-2022.
+-- Using monthly data (as per best practices) gives us a more granular view than annual.
+
+select extract(year from purchase_ts) as purchase_year,
+  extract(month from purchase_ts) as month_year,
+  round(avg(date_diff(ship_ts, purchase_ts, day)), 2) as avg_processing_time,
+  round(avg(date_diff(delivery_ts, purchase_ts, day)), 2) as avg_total_fulfillment_time,
+from core.order_status
+where ship_ts is not null
+  and delivery_Ts is not null
+group by 1, 2
+order by 1, 2;
+
+
+-- Query 2: What is the financial impact of these delays?
+-- Connecting Fulfillment Delays to Refund Rates
+
+-- This query quantifies the financial impact of delays.
+-- We use a CTE to make the logic clean: first, calculate fulfillment time for each order,
+-- then group those orders into buckets to calculate the refund rate for each.
+
+with fulfillment_details as (
+  select order_id,
+    date_diff(delivery_ts, purchase_Ts, day) as total_fulfillment_days,
+    case when refund_ts is not null then 1 else 0 end as is_Refunded
+  from core.order_status
+  where delivery_ts is not null
+)
+
+select
+  case
+    when total_fulfillment_days <= 7 then '1. 0-7 Days'
+    when total_fulfillment_days <= 14 then '2. 8-14 Days'
+    when total_fulfillment_days <= 21 then '3. 15-21 Days' 
+    else '4. 22+ Days'
+  end as fulfillment_bucket,
+  count(order_id) as total_orders,
+    round(avg(is_refunded) * 100, 2) as refund_rate
+from fulfillment_details
+group by 1
+order by 1;
+
+
+-- Query 3: Which specific orders should we investigate?
+-- Identifying Severely Delayed Orders with Window Functions
+
+-- This query provides Angie's team with an actionable list of outlier orders.
+-- We use a window function to calculate the monthly average delivery time for each country.
+-- This is powerful because it compares each order to its direct peers (same country, same month)
+-- to determine if it was an outlier.
+
+with monthly_country_performance as (
+    select
+        order_id,
+        country_code,
+        status.purchase_ts,
+        date_diff(status.delivery_ts, status.purchase_ts, day) as total_fulfillment_days,
+        -- calculate the average fulfillment time for that specific country and month
+        avg(date_diff(status.delivery_ts, status.purchase_ts, day)) over (partition by country_code, extract(year from status.purchase_ts), 
+        extract(month from status.purchase_ts)) as monthly_avg_fulfillment
+    from core.order_status status
+left join core.orders
+  on status.order_id = orders.id
+left join core.customers
+  on orders.customer_id = customers.id
+left join core.geo_lookup geo
+	on geo.country = customers.country_code
+    where delivery_ts is not null
+)
+
+select
+    order_id,
+    country_code,
+    purchase_ts,
+    total_fulfillment_days,
+    round(monthly_avg_fulfillment, 1) as monthly_avg_fulfillment,
+    -- the variance shows how much worse this order was than the average
+    round(total_fulfillment_days - monthly_avg_fulfillment, 1) as variance_from_average
+from monthly_country_performance
+-- we define a "severe" delay as being 10+ days longer than the monthly average
+where (total_fulfillment_days - monthly_avg_fulfillment) > 10
+order by variance_from_average desc;
+
+/*
+INITIAL BUSINESS QUESTIONS
+*/
+
 -- What were the order counts, sales, and AOV for Macbooks sold in North America for each quarter across all years?
 -- join orders to customers then customers to geolookup, filter to macbooks in NA, group by quarters, order by years asc, select count of order id, sum of usd price, and average of usd price
 SELECT DATE_TRUNC(purchase_ts, quarter) as qtr, 
