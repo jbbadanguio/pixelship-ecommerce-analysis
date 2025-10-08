@@ -1,4 +1,6 @@
 # Pixelship: Supply Chain & Profitability Analysis
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/da0aa0d4-26e7-40fb-ba42-8d6f9a5cfe8d" />
+
 
 # Overview
 Pixelship is a global e-commerce company for electronics. that experienced rapid growth between 2019 and 2022. My initial task was a broad exploratory analysis to understand key business trends across sales, marketing, and operations to report on overall company health.
