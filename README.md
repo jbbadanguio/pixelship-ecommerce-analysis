@@ -62,7 +62,7 @@ Based on my analysis, I presented three strategic recommendations to the Head of
 - Recommendation: While not a primary driver of refunds, extreme delays are still a negative customer experience. I recommend a targeted investigation into the severe delivery failures to Qatar in 2020 and Taiwan in 2019.
 - Business Impact: By identifying the root cause of these past events, we can prevent future catastrophic failures and protect the company's reputation in those markets.
 
-Tools & Technical Documentation
-Tools Used: Excel, Google BigQuery, and Tableau.
+### Tools & Technical Documentation
+**Tools Used:** Excel, Google BigQuery, and Tableau.
 
-Technical Files: The complete SQL queries used for this analysis, including comments, are available in the SQL.sql file in this repository.
+Technical Files: The complete SQL queries used for this analysis are available in the sql.sql file in this repository.
