@@ -1,16 +1,16 @@
-# Pixelship: Supply Chain & Profitability Analysis
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/da0aa0d4-26e7-40fb-ba42-8d6f9a5cfe8d" />
+# PixelShip: Supply Chain & Profitability Analysis
+![PixelShip Logo](assets/PixelShip_logo.gif)
 
 
 # Overview
-Pixelship is a global e-commerce company for electronics. that experienced rapid growth between 2019 and 2022. My initial task was a broad exploratory analysis to understand key business trends across sales, marketing, and operations to report on overall company health.
+PixelShip is a global e-commerce company for electronics. that experienced rapid growth between 2019 and 2022. My initial task was a broad exploratory analysis to understand key business trends across sales, marketing, and operations to report on overall company health.
 
 In this first phase, I looked at North Star Metrics like overall sales revenue, Average Order Value (AOV), and order counts. While top-line revenue was strong, a critical concern was raised by the Head of Operations, Angie, regarding a perceived increase in customer refunds and complaints about shipping. This feedback suggested that our high-level success might be hiding underlying operational issues that were hurting profitability and customer satisfaction. This prompted a dedicated, deep-dive analysis into the company's supply chain performance.
 
 _My objective for this project was to lead an end-to-end analysis of four years of order data to either validate or disprove this hypothesis._ 
 
 # ERD
-<img width="1875" height="1114" alt="image" src="https://github.com/user-attachments/assets/6357afa3-c031-454e-825f-0e24016d8987" />
+![Entity Relationship Diagram](assets/erd.webp)
 
 
 # Executive Summary
@@ -27,7 +27,7 @@ My analysis uncovered several critical insights that reshaped the company's unde
 
 # Detailed Analysis & Insights
 ### Insight 1: Operational Performance Remained Stable and Efficient
-Despite the global disruptions of the pandemic, Pixelship's core operations proved to be highly resilient. The company-wide average fulfillment time remained stable at approximately 7.5 days from 2019 through 2022. This key finding disproved the initial hypothesis that a general slowdown was causing customer dissatisfaction. The issue was not a systemic failure.
+Despite the global disruptions of the pandemic, PixelShip's core operations proved to be highly resilient. The company-wide average fulfillment time remained stable at approximately 7.5 days from 2019 through 2022. This key finding disproved the initial hypothesis that a general slowdown was causing customer dissatisfaction. The issue was not a systemic failure.
 
 ### Insight 2: Shipping Delays Show No Significant Impact on Refunds
 The core of my investigation was to test the hypothesis that shipping delays were a primary driver of refunds. The data showed this to be incorrect.
