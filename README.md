@@ -1,5 +1,5 @@
 # PixelShip: Supply Chain & Profitability Analysis
-![PixelShip Logo](assets/PixelShip_logo.gif)
+![PixelShip Logo](assets/pixelship_logo.gif)
 
 
 # Overview
