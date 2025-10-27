@@ -1,5 +1,9 @@
-# PixelShip: Supply Chain & Profitability Analysis
-![PixelShip Logo](assets/pixelship_logo.gif)
+# <div align="center">PixelShip: Supply Chain & Profitability Analysis</div>
+
+<p align="center">
+  <img src="assets/pixelship_logo.gif" alt="PixelShip Logo">
+</p>
+
 
 
 # Overview
