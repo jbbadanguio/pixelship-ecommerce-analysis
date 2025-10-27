@@ -3,9 +3,9 @@
 
 
 # Overview
-PixelShip is a global e-commerce company for electronics. that experienced rapid growth between 2019 and 2022. My initial task was a broad exploratory analysis to understand key business trends across sales, marketing, and operations to report on overall company health.
+PixelShip is a global e-commerce company for electronics that experienced rapid growth between 2019 and 2022. My initial task was a broad exploratory analysis to understand key business trends across sales, marketing, and operations to report on overall company health.
 
-In this first phase, I looked at North Star Metrics like overall sales revenue, Average Order Value (AOV), and order counts. While top-line revenue was strong, a critical concern was raised by the Head of Operations, Angie, regarding a perceived increase in customer refunds and complaints about shipping. This feedback suggested that our high-level success might be hiding underlying operational issues that were hurting profitability and customer satisfaction. This prompted a dedicated, deep-dive analysis into the company's supply chain performance.
+In this first phase, I looked at North Star Metrics like overall sales revenue, Average Order Value (AOV), and order counts. While top-line revenue was strong, a critical concern was raised by the Head of Operations regarding a perceived increase in customer refunds and complaints about shipping. This feedback suggested that our high-level success might be hiding underlying operational issues that were hurting profitability and customer satisfaction. This prompted a dedicated, deep-dive analysis into the company's supply chain performance.
 
 _My objective for this project was to lead an end-to-end analysis of four years of order data to either validate or disprove this hypothesis._ 
 
