@@ -1,74 +1,63 @@
-# <div align="center">PixelShip: Supply Chain & Profitability Analysis</div>
+# <div align="center">PixelShip E-Commerce Analysis</div>
 
 <p align="center">
   <img src="assets/pixelship_logo.gif" alt="PixelShip Logo">
 </p>
 
 
-
 # Overview
-PixelShip is a global e-commerce company for electronics that experienced rapid growth between 2019 and 2022. My initial task was a broad exploratory analysis to understand key business trends across sales, marketing, and operations to report on overall company health.
+PixelShip is a global e-commerce company founded in 2018 that sells popular electronics from brands like Apple, Samsung, and Lenovo. With a massive, underutilized dataset, the Head of Operations has asked for a comprehensive analysis of sales trends from 2019-2022.
 
-In this first phase, I looked at North Star Metrics like overall sales revenue, Average Order Value (AOV), and order counts. While top-line revenue was strong, a critical concern was raised by the Head of Operations regarding a perceived increase in customer refunds and complaints about shipping. This feedback suggested that our high-level success might be hiding underlying operational issues that were hurting profitability and customer satisfaction. This prompted a dedicated, deep-dive analysis into the company's supply chain performance.
-
-_My objective for this project was to lead an end-to-end analysis of four years of order data to either validate or disprove this hypothesis._ 
+The primary goal is to uncover critical insights to share at the upcoming company-wide town hall. This analysis will help the finance, sales, and product teams understand peak-COVID performance and identify key opportunities for growth.
 
 # ERD
 ![Entity Relationship Diagram](assets/erd.webp)
 
 
 # Executive Summary
-My analysis uncovered several critical insights that reshaped the company's understanding of its operational health and its relationship with customer satisfaction.
+Sales at PixelShip saw an unprecedented surge in 2020, driven by the COVID-19 pandemic, followed by a market correction and sales decline in 2022. Despite this, the company's loyalty program has shown exceptional promise, with loyalty members' average order value (AOV) and order volume surpassing non-loyalty members in 2021 and 2022.
 
-**1. Operational Efficiency is a Core Strength:** 
-- The central finding of this analysis is that shipping time is NOT a primary driver of customer refunds. The initial assumption that shipping delays were causing a spike in refunds was not supported by the data.
+Key opportunities lie in:
+- Enhancing the loyalty program to capitalize on this high-value segment.
+- Investigating operational inefficiencies, particularly in EMEA, which shows the longest average delivery times.
+- Managing product refunds, as high-value items like laptops (ThinkPad, MacBook) have the highest refund rates, while popular items (Apple AirPods) have the highest refund count.
 
-**2. The 7-Day "Tipping Point":** 
-- The refund rate remains remarkably stable for deliveries taking up to two weeks, increasing only marginally from 4.89% (for 0-7 day deliveries) to 5.05% (for 8-14 day deliveries). This demonstrates that the company is highly resilient to minor shipping delays.
-
-**3. The Problem is Acute, Not Chronic:** 
-- My initial EDA revealed that widespread, systemic delays were not an issue. Instead, the data pointed to severe, acute failures concentrated in specific countries during specific years (e.g., Qatar in 2020), which required targeted investigation.
+# PixelShip Performance Dashboard
+[VISUAL TO INSERT HERE]
 
 # Detailed Analysis & Insights
-### Insight 1: Operational Performance Remained Stable and Efficient
-Despite the global disruptions of the pandemic, PixelShip's core operations proved to be highly resilient. The company-wide average fulfillment time remained stable at approximately 7.5 days from 2019 through 2022. This key finding disproved the initial hypothesis that a general slowdown was causing customer dissatisfaction. The issue was not a systemic failure.
+### Overall Sales & Regional Trends
+- **Peak-COVID Surge**: The company experienced a massive 163% YoY sales surge in 2020. This momentum slowed in 2021 and saw a -46% decline in 2022 as sales "normalized" post-pandemic.
+- **Most Popular Products by Region**: (Answer to Q4.4) Apple AirPods are the most popular product by order count across all regions. North America remains the highest-volume region for top-performing products.
+- **Spotlight on MacBooks**: MacBook sales in North America peaked in Q4 2020, aligning with the work-from-home trend. Sales have since stabilized but remain a critical, high-AOV product category.
 
-### Insight 2: Shipping Delays Show No Significant Impact on Refunds
-The core of my investigation was to test the hypothesis that shipping delays were a primary driver of refunds. The data showed this to be incorrect.
-- The refund rate for orders delivered within a week was 4.89%.
-- For orders taking 8-14 days, the refund rate only increased to 5.05%.
+### Product Performance & Refunds
+- **Refund Rate vs. Count**: The analysis revealed a key difference:
+  - **Highest Refund Rate**: The ThinkPad Laptop has the highest refund rate (11.7%).
+  - **Highest Refund Count**: Apple AirPods have the highest number of refunds (2.6K), likely due to their high sales volume.
+- **High-Value Refunds**: Other high-AOV items like the MacBook Air (11.4%) and Apple iPhone (7.6%) also have high refund rates, suggesting a potential issue with product descriptions, quality, or customer expectations on expensive items.
 
-This negligible increase proves that customers are not significantly more likely to request a refund, even when deliveries take up to two weeks. This insight prevents the company from investing resources in solving the wrong problem.
+### Loyalty Program & Customer Behavior
+- **Loyalty Program is a Success**: While non-loyalty customers drove sales in 2019-2020, the trend has reversed. In 2022, loyalty members not only placed more orders but also had an AOV that was ~$30 higher than non-loyalty members.
+- **Time to First Purchase:**: Interestingly, both loyalty and non-loyalty customers take a similar amount of time to make their first purchase (approximately 3.4 - 3.5 months after account creation). This suggests the loyalty program's value is in retention and higher AOV, not necessarily a faster initial conversion.
 
-[VISUAL TO INSERT HERE]
-Screenshot of a Tableau bar chart titled "Refund Rate Remains Stable Despite Minor Delays." This visual clearly shows the small difference between the 0-7 and 8-14 day buckets.
-
-### Insight 3: Pinpointing Acute, High-Impact Failures
-While the overall system was stable, my analysis of country-level performance uncovered specific, high-impact failures. These were not chronic issues but severe, isolated events.
-- **Qatar (QA):** Average fulfillment time spiked to 47.6 days in 2020 before returning to normal.
-- **Taiwan (TW):** Average fulfillment time hit 34.1 days in 2019 before returning to normal.
-
-These acute failures, while not the primary driver of refunds, still represent a significant negative customer experience and a risk to the company's reputation in those markets.
-
-[VISUAL TO INSERT HERE]
-Screenshot of the Excel PivotTable or a Tableau chart showing the "Highest Avg Fulfillment Time by Country" with the yearly breakdown. This visually supports the finding about acute, year-specific failures.
+### Operational Efficiency
+- **Delivery Time Bottleneck**: The EMEA region has the highest average time-to-deliver for products, representing a key operational bottleneck that could be impacting customer satisfaction.
 
 # Actionable Recommendations for Stakeholders
-Based on my analysis, I presented three strategic recommendations to the Head of Operations to refocus the company's efforts on the true drivers of customer satisfaction.
+Based on these insights, I propose the following actions:
 
-**Shift Focus from Shipping Time as the Primary Refund Driver:**
-- **Recommendation:** Communicate to leadership and the customer support team that my analysis shows that shipping time is not the primary cause of customer refunds.
-- **Business Impact:** This prevents the company from investing significant resources into optimizing a process that is not broken and allows us to redirect our analytical efforts toward finding the true root causes.
+**For the Marketing Team:**
+- Double-down on the loyalty program. The data proves its value. Launch campaigns focused on converting non-loyalty customers and retaining existing members, highlighting the exclusive perks that drive high-AOV purchases.
+- Use the "most popular product by region" data to inform targeted ad spend.
 
-**Launch a New Analysis to Find the True Drivers of Refunds:**
-- **Recommendation:** Initiate a new analytical deep-dive to investigate other potential causes for refunds, such as product category (are certain items defective more often?), marketing channel (do certain channels bring in less satisfied customers?), or purchase platform (is the mobile app experience causing issues?).
-- **Business Impact:** This data-driven pivot puts the company on the right path to solving the actual problem, improving customer retention and protecting profit margins.
+**For the Product Team:**
+- Investigate high-AOV refunds. Partner with Customer Service to understand why ThinkPads and MacBooks are being returned at such a high rate. This could be a quality control issue, a problem with carrier shipping, or mismatched expectations from the product page.
 
-**Conduct a Post-Mortem on Acute Shipping Failures:**
-- **Recommendation:** While not a primary driver of refunds, extreme delays are still a negative customer experience. I recommend a targeted investigation into the severe delivery failures to Qatar in 2020 and Taiwan in 2019.
-- **Business Impact:** By identifying the root cause of these past events, we can prevent future catastrophic failures and protect the company's reputation in those markets.
+**For the Operations Team (Attn: Angie):**
+- Analyze the EMEA logistics chain. The high delivery time in EMEA is a clear outlier. A deep-dive is needed to identify bottlenecks (e.g., specific carriers, customs delays, warehouse locations) to improve efficiency.
 
 ### Tools & Technical Documentation
 **Tools Used:** Excel, Google BigQuery, and Tableau.
 
-**Technical Files:** The complete SQL queries used for this analysis are available in the sql.sql file in this repository.
+**Technical Files:** The complete SQL queries used for this analysis are available in the pixelship-operations.sql file in this repository.
