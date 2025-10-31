@@ -22,8 +22,6 @@ Key opportunities lie in:
 - Investigating operational inefficiencies, particularly in EMEA, which shows the longest average delivery times.
 - Managing product refunds, as high-value items like laptops (ThinkPad, MacBook) have the highest refund rates, while popular items (Apple AirPods) have the highest refund count.
 
-# PixelShip Performance Dashboard
-[VISUAL TO INSERT HERE]
 
 # Detailed Analysis & Insights
 ### Overall Sales & Regional Trends
