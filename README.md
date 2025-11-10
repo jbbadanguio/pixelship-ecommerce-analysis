@@ -25,6 +25,10 @@ Key opportunities lie in:
 
 # Detailed Analysis & Insights
 ### Overall Sales & Regional Trends
+<p align="center">
+  <img src="assets/sales-dashboard.png" alt="Sales Dashboard">
+</p>
+
 - **Peak-COVID Surge**: The company experienced a massive 163% YoY sales surge in 2020. This momentum slowed in 2021 and saw a -46% decline in 2022 as sales "normalized" post-pandemic.
 - **Most Popular Products by Region**: Apple AirPods are the most popular product by order count across all regions. North America remains the highest-volume region for top-performing products.
 - **Spotlight on MacBooks**: MacBook sales in North America peaked in Q4 2020, aligning with the work-from-home trend. Sales have since stabilized but remain a critical, high-AOV product category.
