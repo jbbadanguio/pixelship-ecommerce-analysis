@@ -27,7 +27,7 @@ Key opportunities lie in:
 # Detailed Analysis & Insights
 ## Sales Performance
 
-The volatile years between 2019 and 2022 underscore the impact of pandemic-driven behavior and the need for agile forecasting. North America remains the dominant market, contributing over half of total sales. The 27in 4K Gaming Monitor emerged as the top revenue driver, with seasonal spikes tied to remote work and holiday demand. High-AOV products, like the Macbook AIr, played a strategic role in revenue growth despite lower order volume, reinforcing the value of premium offerings in the sales mix.
+The volatile years between 2019 and 2022 underscore the impact of pandemic-driven behavior and the need for agile forecasting. North America remains the dominant market, contributing over half of total sales. The 27in 4K Gaming Monitor emerged as the top revenue driver, with seasonal spikes tied to remote work and holiday demand. High-AOV products, like the ThinkPad Laptop and Macbook Air Laptop, played a strategic role in revenue growth despite lower order volume, reinforcing the value of premium offerings in the sales mix.
 
 <p align="center">
   <img src="assets/sales-1.png">
