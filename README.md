@@ -69,9 +69,7 @@ Loyalty program performance signals sustained value creation rather than acceler
   <img src="assets/loyalty-2.png">
 </p>
 
-<p align="center">
-  <img src="assets/loyalty-3.png">
-</p>
+
 
 ## Marketing Segment Behavior
 
