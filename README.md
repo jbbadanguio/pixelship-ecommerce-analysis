@@ -13,8 +13,9 @@ To address this, the Head of Operations commissioned a comprehensive sales and o
 This analysis provides actionable recommendations for the sales, marketing, and product teams by focusing on three North Star Metrics: Sales Revenue, Average Order Value (AOV), and Order Count.
 
 # ERD
-![Entity Relationship Diagram](assets/erd.webp)
-
+<p align="center">
+  <img src="assets/PixelShip ERD.svg" alt="ERD">
+</p>
 
 # Executive Summary
 This analysis of PixelShip's e-commerce data from 2019-2022 reveals a company shaped by pandemic-driven volatility, with significant opportunities in loyalty program expansion and product-level optimization.
