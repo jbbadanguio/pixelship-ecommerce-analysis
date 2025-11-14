@@ -6,23 +6,27 @@
 
 
 # Overview
-PixelShip is a global e-commerce company founded in 2018, specializing in consumer electronics from leading brands such as Apple, Samsung, and Lenovo. With operations spanning multiple regions and platforms, the company has accumulated a rich but underutilized dataset capturing customer behavior, product performance, and sales dynamics over time. In response to shifting market conditions and evolving customer expectations, the Head of Operations commissioned a comprehensive analysis of sales trends from 2019 to 2022.
+PixelShip is a global e-commerce company founded in 2018 that sells popular electronics from brands like Apple, Samsung, and Lenovo via its website and mobile app. Despite possessing a massive—and largely underutilized—dataset of orders, customers, and shipping information, the company's data was messy and had not been leveraged for strategic insights.
 
-This project aims to uncover actionable insights that will inform strategic decisions across finance, sales, and product teams. By examining the impact of pandemic-driven demand, regional performance, product mix, refund behavior, and loyalty engagement, the analysis will equip stakeholders with a clear understanding of what drove growth, where risks emerged, and how to capitalize on high-value segments. The findings will be presented at the upcoming company-wide town hall to align teams around key opportunities and guide future planning.
+To address this, the Head of Operations commissioned a comprehensive sales and operational trend analysis focusing on the volatile 2019-2022 period. The primary goal was to uncover critical, data-driven insights to optimize operations, improve team processes, and understand peak-COVID performance.
+
+This analysis provides actionable recommendations for the sales, marketing, and product teams by focusing on three North Star Metrics: Sales Revenue, Average Order Value (AOV), and Order Count.
 
 # ERD
 ![Entity Relationship Diagram](assets/erd.webp)
 
 
 # Executive Summary
-PixelShip’s sales performance between 2019 and 2022 reflects a volatile market shaped by pandemic-driven demand and post-COVID normalization. A dramatic surge in 2020 was followed by a correction in 2022, yet the company’s loyalty program emerged as a consistent growth engine. Loyalty members outperformed non-members in both average order value (AOV) and order volume, signaling deeper engagement and long-term customer value. Meanwhile, refund trends reveal tension between product price and satisfaction: premium items like the MacBook and ThinkPad show elevated refund rates, while high-volume products like AirPods generate the most returns by count.
+This analysis of PixelShip's e-commerce data from 2019-2022 reveals a company shaped by pandemic-driven volatility, with significant opportunities in loyalty program expansion and product-level optimization.
 
-Key opportunities lie in:
-- Expanding and refining the loyalty program to maximize retention and mid-funnel conversion.
-- Addressing refund risk through improved post-purchase support and expectation alignment for high-AOV products.
-- Leveraging seasonal and regional insights to optimize inventory, promotions, and product positioning.
+From 2019 to 2022, the company averaged 27,000 sales per year, generating an average of $7M in annual revenue with an Average Order Value (AOV) of $254. Performance peaked in 2020 with more than double the sales and revenue of 2019. While order volume continued to grow in 2021, AOV and total revenue declined as purchasing behavior normalized post-COVID.  
 
+Key findings include:
+- **Loyalty Program Success:** The loyalty program has emerged as a key growth engine. In 2021-2022, loyalty members made more purchases than non-members and, by 2022, spent approximately $30 more on average per order.  
+- **Product & Refund Tension:** Refund trends highlight a divide between high-volume and high-value products. While high-volume items like AirPods generate the most returns by count, premium products like the ThinkPad Laptop (11.7% rate) and other laptops (6% rate) have the highest refund rates, signaling a potential gap in customer expectations versus product quality or price.  
+- **Top Revenue Driver:** The 27in 4K Gaming Monitor was the top product by revenue, underscoring its strategic importance.  
 
+Key opportunities lie in expanding the loyalty program to maximize retention, addressing the high refund risk for premium products through improved support, and leveraging seasonal trends to optimize inventory.
 
 # Detailed Analysis & Insights
 ## Sales Performance
@@ -33,13 +37,25 @@ The volatile years between 2019 and 2022 underscore the impact of pandemic-drive
   <img src="assets/sales-1.png">
 </p>
 
+- North America consistently led in sales contribution, accounting for 52% of total revenue across a volatile four-year period. The pandemic triggered a dramatic +163% YoY surge in 2020, followed by a -46% correction in 2022 as demand normalized.
+  
+- This volatility underscores the importance of agile forecasting and regional segmentation. North America’s resilience suggests it should remain a strategic anchor while other regions are evaluated for growth potential.
+
 <p align="center">
   <img src="assets/sales-2.png">
 </p>
 
+- The 27in 4K Gaming Monitor emerged as the top revenue driver, with strong performance across multiple regions. Apple AirPods led in order count but ranked second in revenue, reflecting their mass-market appeal. The MacBook Air, despite having 10x fewer orders than AirPods, contributed significantly to revenue due to its high AOV.
+  
+- This mix of volume and premium pricing highlights the importance of balancing accessibility with strategic high-value offerings.
+
 <p align="center">
   <img src="assets/sales-3.png">
 </p>
+
+- Sales of the 27in 4K Gaming Monitor peaked during Q4 2020, aligning with remote work and holiday shopping trends. The highest concentration of purchases occurred in the weeks leading up to Thanksgiving and Christmas. 
+
+- This seasonal surge reflects consumer investment in home entertainment and productivity during post-COVID restrictions. It also reinforces the value of time-sensitive promotions and inventory planning around key calendar windows.
 
 ## Product Dynamics
 
@@ -49,13 +65,25 @@ Refund patterns reveal key product dynamics across volume, value, and customer e
   <img src="assets/product-1.png">
 </p>
 
+- High-AOV products like the MacBook Air and ThinkPad Laptop show elevated refund rates, introducing tension between perceived value and customer satisfaction. The ThinkPad leads with an 11.7% refund rate, while the MacBook Air follows closely at 11.4%, despite generating $3.1M more in sales. 
+
+- These patterns suggest that premium pricing may raise expectations that aren't always met. Addressing post-purchase experience and product positioning could reduce refund risk in high-value segments.
+
 <p align="center">
   <img src="assets/product-2.png">
 </p>
 
+- Apple AirPods have the highest number of refunds (2.6K) but maintain a relatively low refund rate of 5.4%, likely due to their massive sales volume. In contrast, the MacBook Air has fewer refunds but a much higher refund rate, pointing to quality perception or buyer hesitation. 
+
+- This distinction helps separate operational volume from customer satisfaction concerns. It also suggests that refund mitigation strategies should be tailored by product tier.
+
 <p align="center">
   <img src="assets/product-3.png">
 </p>
+
+- Refund rates for high-AOV products like the MacBook Air and ThinkPad Laptop remained elevated until a sharp drop to 0% in 2022. This decline may reflect operational improvements, policy changes, or shifts in customer expectations. 
+
+- Tracking refund trends over time helps isolate whether issues are product-specific or systemic. It also provides a feedback loop for refining product quality and support strategies.
 
 ## Loyalty Program Impact
 
@@ -65,13 +93,25 @@ Loyalty program performance signals sustained value creation rather than acceler
   <img src="assets/loyalty-1.png">
 </p>
 
+- Loyalty members overtook non-members in AOV in mid-2021 and sustained a $30 lead through late 2022. This consistent gap suggests that loyalty participants are more willing to invest per purchase.
+  
+- The trend reflects deeper customer commitment and possibly stronger alignment with premium offerings. It also validates the loyalty program’s role in driving long-term value rather than short-term acquisition.
+
 <p align="center">
   <img src="assets/loyalty-2.png">
 </p>
 
+- From December 2020 to August 2022, loyalty members consistently placed more orders than non-members. This behavior indicates stronger engagement and repeat purchasing, not just higher spend per order. 
+
+- The volume advantage complements the AOV lead, reinforcing the program’s impact on both frequency and value. Together, these metrics suggest loyalty members are more profitable and more predictable.
+
 <p align="center">
   <img src="assets/loyalty-3.png">
 </p>
+
+- Loyalty members convert more reliably in mid-range windows (31–120 days), outperforming non-members in every bucket beyond the first 30 days. This pattern suggests thoughtful, committed purchasing rather than impulsive behavior. 
+
+- It also highlights the loyalty program’s strength in nurturing long-term engagement rather than accelerating immediate conversion. Lifecycle marketing strategies should focus on reinforcing value during this mid-funnel window.
 
 ## Marketing Segment Behavior
 
@@ -81,14 +121,25 @@ The marketing segment behavior analysis reveals how acquisition source, device t
   <img src="assets/marketing-1.png">
 </p>
 
+- Refund risk is highest among website purchases from social media and unknown channels, especially when paired with tablet or TV devices. These segments show elevated refund rates, suggesting passive browsing, low buyer confidence, or attribution gaps. 
+
+- In contrast, mobile app purchases—particularly via direct and email channels—show lower refund rates, indicating stronger intent and post-purchase satisfaction. Segmenting by device and channel reveals clear behavioral differences worth targeting.
+
 <p align="center">
   <img src="assets/marketing-2.png">
 </p>
+
+- Spending behavior varies widely across acquisition sources. Direct and email channels show consistent mid-tier AOV, while affiliate and social media channels display greater volatility and outliers. 
+
+- This suggests that some channels attract more predictable buyers, while others bring in mixed-intent traffic. Overlaying refund risk reveals that high spend doesn’t always mean high satisfaction, reinforcing the need for value alignment.
 
 <p align="center">
   <img src="assets/marketing-3.png">
 </p>
 
+- Mobile app purchases from affiliate, social media, and email channels drive the highest loyalty engagement, with rates above 60–75%. Website purchases—especially via affiliate and direct channels—lag behind, suggesting weaker retention.
+- 
+- This highlights mobile-first environments as key drivers of long-term customer investment. Pairing acquisition strategy with platform behavior can optimize loyalty outcomes.
 
 # Actionable Recommendations for Stakeholders
 
@@ -112,7 +163,7 @@ The marketing segment behavior analysis reveals how acquisition source, device t
 - Bundle or reposition high-AOV items with lower-risk accessories to reduce perceived purchase friction.
 - Use refund trends by year to evaluate the impact of policy or quality changes — the 2022 drop to 0% suggests operational levers are working.
 
-**For the Product and Merchandising Teams:**
+**For the Digital and UX Teams:**
 - Optimize mobile app UX — it’s the strongest loyalty driver and lowest refund environment.
 - Improve website experience for tablet and TV users, especially from social channels — these segments show high refund risk and may suffer from poor navigation or unclear expectations.
 - Enhance mid-funnel engagement flows (31–120 days) for loyalty members — this is where they outperform in conversion reliability.
