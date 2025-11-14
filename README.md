@@ -138,7 +138,7 @@ The marketing segment behavior analysis reveals how acquisition source, device t
 </p>
 
 - Mobile app purchases from affiliate, social media, and email channels drive the highest loyalty engagement, with rates above 60–75%. Website purchases—especially via affiliate and direct channels—lag behind, suggesting weaker retention.
-- 
+  
 - This highlights mobile-first environments as key drivers of long-term customer investment. Pairing acquisition strategy with platform behavior can optimize loyalty outcomes.
 
 # Actionable Recommendations for Stakeholders
