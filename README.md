@@ -51,6 +51,7 @@ Key opportunities lie in expanding the loyalty program to maximize retention, ad
 <p align="center">
   <img src="assets/sales-3.png">
 </p>
+Note: Heatmap values expressed in thousands ($K)
 
 - Sales of the 27in 4K Gaming Monitor peaked during Q4 2020, aligning with remote work and holiday shopping trends. The highest concentration of purchases occurred in the weeks leading up to Thanksgiving and Christmas. 
 
